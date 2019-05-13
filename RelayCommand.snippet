@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CodeSnippets xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+    <CodeSnippet Format="1.0.0">
+        <Header>
+            <Title>MVVM.Light Property</Title>
+			<Author>guchangchu</Author>
+			<Description>MVVM.Light框架下的RelayCommand</Description>
+			<Shortcut>mlcmd</Shortcut>
+        </Header>
+        <Snippet>
+			<Imports>
+				<Import>
+				   <Namespace>GalaSoft.MvvmLight.Command</Namespace>
+				</Import>
+			</Imports>
+			<Declarations>
+				<Literal>
+					<ID>summary</ID>
+					<ToolTip>这个RelayCommand是做什么的</ToolTip>
+					<Default>做什么</Default>
+				</Literal>
+				<Literal>
+					<ID>pVariable</ID>
+					<ToolTip>定义的变量</ToolTip>
+					<Default>变量</Default>
+				</Literal>
+				<Literal>
+					<ID>method</ID>
+					<ToolTip>方法名</ToolTip>
+					<Default>方法名</Default>
+				</Literal>
+				<Literal>
+					<ID>PName</ID>
+					<ToolTip>Property名称</ToolTip>
+					<Default>Property名称</Default>
+				</Literal>
+			</Declarations>
+            <Code Language="VB" Kind="method body">
+				<![CDATA[
+				''' <summary>
+				''' $summary$
+				''' </summary>
+                Dim _$pVariable$ As RelayCommand
+				Public ReadOnly Property $PName$ As RelayCommand
+					Get
+						If _$pVariable$ Is Nothing Then
+							_$pVariable$ = New RelayCommand(Addressof $method$)
+						End If
+
+						Return _$pVariable$
+					End Get
+				End Property
+				]]>
+            </Code>
+        </Snippet>
+    </CodeSnippet>
+</CodeSnippets>

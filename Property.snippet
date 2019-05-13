@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CodeSnippets xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+    <CodeSnippet Format="1.0.0">
+        <Header>
+            <Title>MVVM.Light Property</Title>
+			<Author>guchangchu</Author>
+			<Description>MVVM.Light框架下的Property</Description>
+			<Shortcut>mlprop</Shortcut>
+        </Header>
+        <Snippet>
+			<Declarations>
+				<Literal>
+					<ID>summary</ID>
+					<ToolTip>这个Property是做什么的</ToolTip>
+					<Default>做什么</Default>
+				</Literal>
+				<Literal>
+					<ID>pVariable</ID>
+					<ToolTip>定义的变量</ToolTip>
+					<Default>变量</Default>
+				</Literal>
+				<Literal>
+					<ID>defaultValue</ID>
+					<ToolTip>变量初始值</ToolTip>
+					<Default>初始值</Default>
+				</Literal>
+				<Literal>
+					<ID>type</ID>
+					<ToolTip>变量的数据类型</ToolTip>
+					<Default>数据类型</Default>
+				</Literal>
+				<Literal>
+					<ID>PName</ID>
+					<ToolTip>Property名称</ToolTip>
+					<Default>Property名称</Default>
+				</Literal>
+			</Declarations>
+            <Code Language="VB" Kind="method body">
+				<![CDATA[
+				''' <summary>
+				''' $summary$
+				''' </summary>
+                Dim _$pVariable$ As $type$ = $defaultValue$
+				Public Property $PName$ As $type$
+					Get
+						Return _$pVariable$
+					End Get
+					Set(value As $type$)
+						[Set](NameOf($PName$), _$pVariable$, value)
+					End Set
+				End Property
+				]]>
+            </Code>
+        </Snippet>
+    </CodeSnippet>
+</CodeSnippets>
